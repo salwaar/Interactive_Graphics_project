@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Car racing</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="car racing game implemented with ThreeJs and CannonJs"
+    />
+
+    <style>
+      body {
+        font-family: Monospace;
+        background-color: #000;
+        color: #fff;
+        margin: 0px;
+        overflow: hidden;
+      }
+
+      button {
+        background: url(assets/images/button.png);
+        width: 181px;
+        height: 43px;
+        border: none;
+        color: #888;
+        text-decoration: none;
+        font-size: 20px;
+      }
+
+      button:hover {
+        color: #fff;
+      }
+
+      #play-btn {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <button id="play-btn">PLAY</button>
+
+    <!-- https://github.com/schteppe/cannon.js/tree/master/build -->
+    <script src="libs/cannon.min.js"></script>
+    <!-- https://github.com/mrdoob/three.js/ -->
+    <script src="libs/three.min.js"></script>
+    <script src="libs/inflate.min.js"></script>
+    <script src="libs/FBXLoader.js"></script>
+    <script src="libs/Detector.js"></script>
+    <script src="libs/CannonDebugRenderer.js"></script>
+
+    <script src="game.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const game = new Game();
+        window.game = game;
+      });
+    </script>
+  </body>
+</html>
